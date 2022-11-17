@@ -16,6 +16,15 @@
 		A46CF1B32926970A00A382B3 /* MovieSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1B22926970A00A382B3 /* MovieSampleTests.swift */; };
 		A46CF1BD2926970A00A382B3 /* MovieSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1BC2926970A00A382B3 /* MovieSampleUITests.swift */; };
 		A46CF1BF2926970A00A382B3 /* MovieSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1BE2926970A00A382B3 /* MovieSampleUITestsLaunchTests.swift */; };
+		A46CF1CD2926990000A382B3 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1CC2926990000A382B3 /* AppAppearance.swift */; };
+		A46CF1CF2926994400A382B3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1CE2926994400A382B3 /* AppConfiguration.swift */; };
+		A46CF1D12926A24B00A382B3 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D02926A24B00A382B3 /* AppFlowCoordinator.swift */; };
+		A46CF1D42926A2AE00A382B3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D32926A2AE00A382B3 /* Endpoint.swift */; };
+		A46CF1D62926A2EA00A382B3 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D52926A2EA00A382B3 /* DataTransferService.swift */; };
+		A46CF1D82926A31200A382B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D72926A31200A382B3 /* NetworkService.swift */; };
+		A46CF1DA2926A33900A382B3 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D92926A33900A382B3 /* NetworkConfig.swift */; };
+		A46CF1DD2926A36E00A382B3 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1DC2926A36E00A382B3 /* ConnectionError.swift */; };
+		A46CF1DF2926A39100A382B3 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1DE2926A39100A382B3 /* Cancellable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		A46CF1B82926970A00A382B3 /* MovieSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46CF1BC2926970A00A382B3 /* MovieSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSampleUITests.swift; sourceTree = "<group>"; };
 		A46CF1BE2926970A00A382B3 /* MovieSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A46CF1CC2926990000A382B3 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		A46CF1CE2926994400A382B3 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		A46CF1D02926A24B00A382B3 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		A46CF1D32926A2AE00A382B3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A46CF1D52926A2EA00A382B3 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		A46CF1D72926A31200A382B3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A46CF1D92926A33900A382B3 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		A46CF1DC2926A36E00A382B3 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		A46CF1DE2926A39100A382B3 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +117,12 @@
 		A46CF19A2926970800A382B3 /* MovieSample */ = {
 			isa = PBXGroup;
 			children = (
-				A46CF19B2926970800A382B3 /* AppDelegate.swift */,
+				A46CF1CB292698D200A382B3 /* Application */,
+				A46CF1D22926A29D00A382B3 /* Network */,
+				A46CF1DB2926A36300A382B3 /* Common */,
 				A46CF19D2926970800A382B3 /* SceneDelegate.swift */,
 				A46CF19F2926970800A382B3 /* ViewController.swift */,
-				A46CF1A12926970800A382B3 /* Main.storyboard */,
-				A46CF1A42926970A00A382B3 /* Assets.xcassets */,
-				A46CF1A62926970A00A382B3 /* LaunchScreen.storyboard */,
-				A46CF1A92926970A00A382B3 /* Info.plist */,
+				A46CF1E02926A3C600A382B3 /* Resources */,
 			);
 			path = MovieSample;
 			sourceTree = "<group>";
@@ -125,6 +142,48 @@
 				A46CF1BE2926970A00A382B3 /* MovieSampleUITestsLaunchTests.swift */,
 			);
 			path = MovieSampleUITests;
+			sourceTree = "<group>";
+		};
+		A46CF1CB292698D200A382B3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF19B2926970800A382B3 /* AppDelegate.swift */,
+				A46CF1CC2926990000A382B3 /* AppAppearance.swift */,
+				A46CF1CE2926994400A382B3 /* AppConfiguration.swift */,
+				A46CF1D02926A24B00A382B3 /* AppFlowCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A46CF1D22926A29D00A382B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1D32926A2AE00A382B3 /* Endpoint.swift */,
+				A46CF1D52926A2EA00A382B3 /* DataTransferService.swift */,
+				A46CF1D72926A31200A382B3 /* NetworkService.swift */,
+				A46CF1D92926A33900A382B3 /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A46CF1DB2926A36300A382B3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1DC2926A36E00A382B3 /* ConnectionError.swift */,
+				A46CF1DE2926A39100A382B3 /* Cancellable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A46CF1E02926A3C600A382B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1A12926970800A382B3 /* Main.storyboard */,
+				A46CF1A42926970A00A382B3 /* Assets.xcassets */,
+				A46CF1A62926970A00A382B3 /* LaunchScreen.storyboard */,
+				A46CF1A92926970A00A382B3 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46CF1D42926A2AE00A382B3 /* Endpoint.swift in Sources */,
 				A46CF1A02926970800A382B3 /* ViewController.swift in Sources */,
+				A46CF1CF2926994400A382B3 /* AppConfiguration.swift in Sources */,
 				A46CF19C2926970800A382B3 /* AppDelegate.swift in Sources */,
+				A46CF1D82926A31200A382B3 /* NetworkService.swift in Sources */,
+				A46CF1D62926A2EA00A382B3 /* DataTransferService.swift in Sources */,
+				A46CF1DF2926A39100A382B3 /* Cancellable.swift in Sources */,
+				A46CF1DA2926A33900A382B3 /* NetworkConfig.swift in Sources */,
 				A46CF19E2926970800A382B3 /* SceneDelegate.swift in Sources */,
+				A46CF1D12926A24B00A382B3 /* AppFlowCoordinator.swift in Sources */,
+				A46CF1CD2926990000A382B3 /* AppAppearance.swift in Sources */,
+				A46CF1DD2926A36E00A382B3 /* ConnectionError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +513,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +542,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
