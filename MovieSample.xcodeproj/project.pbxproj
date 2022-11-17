@@ -25,6 +25,16 @@
 		A46CF1DA2926A33900A382B3 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1D92926A33900A382B3 /* NetworkConfig.swift */; };
 		A46CF1DD2926A36E00A382B3 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1DC2926A36E00A382B3 /* ConnectionError.swift */; };
 		A46CF1DF2926A39100A382B3 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1DE2926A39100A382B3 /* Cancellable.swift */; };
+		A46CF1E42926A43F00A382B3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1E32926A43F00A382B3 /* Movie.swift */; };
+		A46CF1E72926A4E900A382B3 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1E62926A4E900A382B3 /* UseCase.swift */; };
+		A46CF1EC2926A57A00A382B3 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1EB2926A57A00A382B3 /* APIEndpoints.swift */; };
+		A46CF1EF2926A5B700A382B3 /* MoviesRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1EE2926A5B700A382B3 /* MoviesRequestDTO+Mapping.swift */; };
+		A46CF1F12926A5E700A382B3 /* MoviesResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1F02926A5E700A382B3 /* MoviesResponseDTO+Mapping.swift */; };
+		A46CF1F32926ADAD00A382B3 /* MovieQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1F22926ADAD00A382B3 /* MovieQuery.swift */; };
+		A46CF1F62926ADDB00A382B3 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1F52926ADDB00A382B3 /* MoviesRepository.swift */; };
+		A46CF1F82926AE1C00A382B3 /* SearchMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1F72926AE1C00A382B3 /* SearchMoviesUseCase.swift */; };
+		A46CF1FA2926AF3800A382B3 /* DefaultMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1F92926AF3800A382B3 /* DefaultMoviesRepository.swift */; };
+		A46CF1FD2926AFD800A382B3 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46CF1FC2926AFD800A382B3 /* RepositoryTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,16 @@
 		A46CF1D92926A33900A382B3 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		A46CF1DC2926A36E00A382B3 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		A46CF1DE2926A39100A382B3 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		A46CF1E32926A43F00A382B3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A46CF1E62926A4E900A382B3 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		A46CF1EB2926A57A00A382B3 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		A46CF1EE2926A5B700A382B3 /* MoviesRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
+		A46CF1F02926A5E700A382B3 /* MoviesResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoviesResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		A46CF1F22926ADAD00A382B3 /* MovieQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuery.swift; sourceTree = "<group>"; };
+		A46CF1F52926ADDB00A382B3 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		A46CF1F72926AE1C00A382B3 /* SearchMoviesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMoviesUseCase.swift; sourceTree = "<group>"; };
+		A46CF1F92926AF3800A382B3 /* DefaultMoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMoviesRepository.swift; sourceTree = "<group>"; };
+		A46CF1FC2926AFD800A382B3 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +139,8 @@
 			children = (
 				A46CF1CB292698D200A382B3 /* Application */,
 				A46CF1D22926A29D00A382B3 /* Network */,
+				A46CF1E12926A42600A382B3 /* Domain */,
+				A46CF1E82926A53200A382B3 /* Data */,
 				A46CF1DB2926A36300A382B3 /* Common */,
 				A46CF19D2926970800A382B3 /* SceneDelegate.swift */,
 				A46CF19F2926970800A382B3 /* ViewController.swift */,
@@ -184,6 +206,86 @@
 				A46CF1A92926970A00A382B3 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A46CF1E12926A42600A382B3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1F42926ADC000A382B3 /* Repositories */,
+				A46CF1E52926A4D000A382B3 /* UseCase */,
+				A46CF1E22926A42E00A382B3 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A46CF1E22926A42E00A382B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1E32926A43F00A382B3 /* Movie.swift */,
+				A46CF1F22926ADAD00A382B3 /* MovieQuery.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46CF1E52926A4D000A382B3 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1E62926A4E900A382B3 /* UseCase.swift */,
+				A46CF1F72926AE1C00A382B3 /* SearchMoviesUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A46CF1E82926A53200A382B3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1FB2926AFCC00A382B3 /* Utils */,
+				A46CF1ED2926A5AA00A382B3 /* DataMapping */,
+				A46CF1EA2926A56100A382B3 /* Network */,
+				A46CF1E92926A55200A382B3 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A46CF1E92926A55200A382B3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1F92926AF3800A382B3 /* DefaultMoviesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A46CF1EA2926A56100A382B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1EB2926A57A00A382B3 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A46CF1ED2926A5AA00A382B3 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1EE2926A5B700A382B3 /* MoviesRequestDTO+Mapping.swift */,
+				A46CF1F02926A5E700A382B3 /* MoviesResponseDTO+Mapping.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		A46CF1F42926ADC000A382B3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1F52926ADDB00A382B3 /* MoviesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A46CF1FB2926AFCC00A382B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A46CF1FC2926AFD800A382B3 /* RepositoryTask.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,18 +419,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46CF1EC2926A57A00A382B3 /* APIEndpoints.swift in Sources */,
 				A46CF1D42926A2AE00A382B3 /* Endpoint.swift in Sources */,
+				A46CF1F82926AE1C00A382B3 /* SearchMoviesUseCase.swift in Sources */,
 				A46CF1A02926970800A382B3 /* ViewController.swift in Sources */,
 				A46CF1CF2926994400A382B3 /* AppConfiguration.swift in Sources */,
+				A46CF1EF2926A5B700A382B3 /* MoviesRequestDTO+Mapping.swift in Sources */,
+				A46CF1F12926A5E700A382B3 /* MoviesResponseDTO+Mapping.swift in Sources */,
 				A46CF19C2926970800A382B3 /* AppDelegate.swift in Sources */,
 				A46CF1D82926A31200A382B3 /* NetworkService.swift in Sources */,
 				A46CF1D62926A2EA00A382B3 /* DataTransferService.swift in Sources */,
 				A46CF1DF2926A39100A382B3 /* Cancellable.swift in Sources */,
 				A46CF1DA2926A33900A382B3 /* NetworkConfig.swift in Sources */,
+				A46CF1F32926ADAD00A382B3 /* MovieQuery.swift in Sources */,
+				A46CF1F62926ADDB00A382B3 /* MoviesRepository.swift in Sources */,
+				A46CF1E42926A43F00A382B3 /* Movie.swift in Sources */,
 				A46CF19E2926970800A382B3 /* SceneDelegate.swift in Sources */,
 				A46CF1D12926A24B00A382B3 /* AppFlowCoordinator.swift in Sources */,
+				A46CF1E72926A4E900A382B3 /* UseCase.swift in Sources */,
+				A46CF1FD2926AFD800A382B3 /* RepositoryTask.swift in Sources */,
 				A46CF1CD2926990000A382B3 /* AppAppearance.swift in Sources */,
 				A46CF1DD2926A36E00A382B3 /* ConnectionError.swift in Sources */,
+				A46CF1FA2926AF3800A382B3 /* DefaultMoviesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,9 +619,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E9V43M7RFT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MovieSample/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MovieSample;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -536,9 +649,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E9V43M7RFT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MovieSample/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MovieSample;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
