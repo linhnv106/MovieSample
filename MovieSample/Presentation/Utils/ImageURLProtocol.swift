@@ -54,7 +54,8 @@ class ImageURLProtocol: URLProtocol {
     }
     
     static func urlSession() -> URLSession {
-        let config = URLSessionConfiguration.ephemeral
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 90
         config.protocolClasses = [ImageURLProtocol.classForCoder()]
         return  URLSession(configuration: config)
     }

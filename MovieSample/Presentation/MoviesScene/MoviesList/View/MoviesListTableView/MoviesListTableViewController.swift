@@ -10,6 +10,7 @@ import UIKit
 final class MoviesListTableViewController: UITableViewController {
 
     var viewModel: MoviesListViewModel!
+    var posterImagesRepository: PosterImagesRepository?
 
     var nextPageLoadingSpinner: UIActivityIndicatorView?
 
@@ -58,7 +59,9 @@ extension MoviesListTableViewController {
             return UITableViewCell()
         }
 
-        cell.fill(with: viewModel.items.value[indexPath.row])
+        cell.fill(with: viewModel.items.value[indexPath.row],
+                  posterImagesRepository: posterImagesRepository
+        )
 
     
         return cell
@@ -71,4 +74,5 @@ extension MoviesListTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectItem(at: indexPath.row)
     }
+    
 }

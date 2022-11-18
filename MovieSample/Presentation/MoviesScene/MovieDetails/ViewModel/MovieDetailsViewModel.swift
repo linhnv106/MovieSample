@@ -23,6 +23,7 @@ protocol MovieDetailsViewModel: MovieDetailsViewModelInput, MovieDetailsViewMode
 final class DefaultMovieDetailsViewModel: MovieDetailsViewModel {
     
     private let posterImagePath: String?
+    private let posterImagesRepository: PosterImagesRepository
     private var imageLoadTask: Cancellable? { willSet { imageLoadTask?.cancel() } }
 
     // MARK: - OUTPUT
@@ -31,11 +32,12 @@ final class DefaultMovieDetailsViewModel: MovieDetailsViewModel {
     let isPosterImageHidden: Bool
     let type: String
     
-    init(movie: Movie) {
+    init(movie: Movie, posterImagesRepository: PosterImagesRepository) {
         self.title = movie.title ?? ""
         self.type = movie.type ?? ""
         self.posterImagePath = movie.posterPath
         self.isPosterImageHidden = movie.posterPath == nil
+        self.posterImagesRepository = posterImagesRepository
     }
 }
 
@@ -43,15 +45,16 @@ final class DefaultMovieDetailsViewModel: MovieDetailsViewModel {
 extension DefaultMovieDetailsViewModel {
     
     func updatePosterImage() {
-//        guard let posterImagePath = posterImagePath else { return }
-        let sampleUrl = "https://cdn.pixabay.com/photo/2022/11/02/04/07/deer-7563934_1280.jpg"
+         let posterImagePath = "https://cdn.pixabay.com/photo/2022/11/14/19/25/squirrel-7592356_1280.jpg"
 
-        if let url = NSURL.init(string: sampleUrl) {
-            ImageCache.publicCache.load(url: url) { image in
-                if let img = image {
-                    self.posterImage.value = img.jpegData(compressionQuality: 90.0)
-                    }
-                }
+        imageLoadTask = posterImagesRepository.fetchImage(with: posterImagePath) { result in
+            guard self.posterImagePath == posterImagePath else { return }
+            switch result {
+            case .success(let data):
+                self.posterImage.value = data
+            case .failure: break
+            }
+            self.imageLoadTask = nil
         }
     }
 }

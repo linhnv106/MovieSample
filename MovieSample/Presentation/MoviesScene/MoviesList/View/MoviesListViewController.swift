@@ -13,17 +13,23 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
     @IBOutlet private var moviesListContainer: UIView!
     @IBOutlet private var searchBarContainer: UIView!
     @IBOutlet private var emptyDataLabel: UILabel!
-    
+    private var posterImagesRepository: PosterImagesRepository?
+
     private var viewModel: MoviesListViewModel!
 
     private var moviesTableViewController: MoviesListTableViewController?
     private var searchController = UISearchController(searchResultsController: nil)
 
+    private var pendingRequestWorkItem: DispatchWorkItem?
+
     // MARK: - Lifecycle
 
-    static func create(with viewModel: MoviesListViewModel) -> MoviesListViewController {
+    static func create(with viewModel: MoviesListViewModel,
+                       posterImagesRepository: PosterImagesRepository?
+    ) -> MoviesListViewController {
         let view = MoviesListViewController.instantiateViewController()
         view.viewModel = viewModel
+        view.posterImagesRepository = posterImagesRepository
         return view
     }
 
@@ -51,7 +57,9 @@ final class MoviesListViewController: UIViewController, StoryboardInstantiable, 
         if segue.identifier == String(describing: MoviesListTableViewController.self),
             let destinationVC = segue.destination as? MoviesListTableViewController {
             moviesTableViewController = destinationVC
-            moviesTableViewController?.viewModel = viewModel        }
+            moviesTableViewController?.viewModel = viewModel
+            moviesTableViewController?.posterImagesRepository = posterImagesRepository
+        }
     }
 
     // MARK: - Private
@@ -132,6 +140,17 @@ extension MoviesListViewController: UISearchBarDelegate {
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         emptyDataLabel.isHidden = true
+        if (searchText.count > 2) {
+            pendingRequestWorkItem?.cancel()
+            let requestWorkItem = DispatchWorkItem { [weak self] in
+                self?.viewModel.didSearch(query: searchText)
+            }
+            pendingRequestWorkItem = requestWorkItem
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250),
+                                          execute: requestWorkItem)
+        }
+    
     }
+
 }
 

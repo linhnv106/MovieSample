@@ -33,10 +33,14 @@ final class MoviesSceneDIContainer {
     func makeMoviesRepository() -> MoviesRepository {
         return DefaultMoviesRepository(dataTransferService: dependencies.apiDataTransferService)
     }
-    
+    func makePosterImagesRepository() -> PosterImagesRepository {
+        return DefaultPosterImagesRepository(dataTransferService: dependencies.imageDataTransferService)
+    }
     // MARK: - Movies List
     func makeMoviesListViewController(actions: MoviesListViewModelActions) -> MoviesListViewController {
-        return MoviesListViewController.create(with: makeMoviesListViewModel(actions: actions))
+        return MoviesListViewController.create(with: makeMoviesListViewModel(actions: actions),
+                                               posterImagesRepository: makePosterImagesRepository()
+        )
     }
     
     func makeMoviesListViewModel(actions: MoviesListViewModelActions) -> MoviesListViewModel {
@@ -50,7 +54,8 @@ final class MoviesSceneDIContainer {
     }
     
     func makeMoviesDetailsViewModel(movie: Movie) -> MovieDetailsViewModel {
-        return DefaultMovieDetailsViewModel(movie: movie)
+        return DefaultMovieDetailsViewModel(movie: movie,
+                                            posterImagesRepository: makePosterImagesRepository())
     }
     
     
