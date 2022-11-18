@@ -11,10 +11,10 @@ struct Movie: Equatable, Identifiable {
     let title: String?
     let type: String?
     let posterPath: String?
-    let year: Date?
+    let year: String?
 }
 
 struct MoviesPage: Equatable {
-    let totalResults: Int
+    let totalResults: String?
     let movies: [Movie]
 }

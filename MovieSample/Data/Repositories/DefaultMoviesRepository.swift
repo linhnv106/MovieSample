@@ -19,7 +19,7 @@ extension DefaultMoviesRepository: MoviesRepository {
     public func fetchMoviesList(query: MovieQuery,
                                 completion: @escaping (Result<MoviesPage, Error>) -> Void) -> Cancellable? {
 
-        let requestDTO = MoviesRequestDTO(query: query.query)
+        let requestDTO = MoviesRequestDTO(s: query.query)
         let task = RepositoryTask()
         guard !task.isCancelled else { return task}
         let endpoint = APIEndpoints.getMovies(with: requestDTO)

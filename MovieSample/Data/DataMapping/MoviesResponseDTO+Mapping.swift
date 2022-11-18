@@ -13,7 +13,7 @@ struct MoviesResponseDTO: Decodable {
         case movies = "Search"
     }
     let response: String
-    let totalResults: Int
+    let totalResults: String?
     let movies: [MovieDTO]
 }
 
@@ -50,7 +50,7 @@ extension MoviesResponseDTO.MovieDTO {
                      title: title,
                      type: type,
                      posterPath: posterPath,
-                     year: dateFormatter.date(from: year ?? ""))
+                     year: year)
     }
 }
 
